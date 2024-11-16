@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
+/* 네비게이션 바 스타일 */
+.nav {
+  background-color: lightblue; /* 하늘색 배경 */
+  color: white; /* 텍스트 색상 */
+  display: flex; /* Flexbox 사용 */
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  padding: 10px; /* 위아래 여백 */
+  margin: 0 auto; /* 수평 중앙 정렬 */
+  width: 100%; /* 바의 너비 */
+  font-size: 1.5rem; /* 텍스트 크기 */
+  height: 60px; /* 높이를 지정해서 중앙 정렬 유지 */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* Menu 전체 컨테이너 */
+.menu {
+  padding: 10px;
+  margin : 0;
+  background-color: #f9f9f9; /* 배경색 */
+  text-align: left; /* 텍스트 왼쪽 정렬 */
+  border-right: 1px solid #ddd; /* 오른쪽 경계선 */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Menu의 각 항목 */
+.menu-item {
+  display: flex; /* Flexbox로 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  padding: 5px 1px;
+  cursor: pointer; /* 커서 포인터로 변경 */
+  transition: background-color 0.3s ease; /* Hover 효과 추가 */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Menu 항목 Hover 효과 */
+.menu-item:hover {
+  background-color: #e9ecef; /* Hover 시 배경색 변경 */
+}
+
+/* Menu 아이콘 */
+.menu-item .menu-icon {
+  font-size: 1.5rem; /* 아이콘 크기 */
+  margin-right: 10px; /* 아이콘과 텍스트 간 간격 */
+  color: #007bff; /* 아이콘 색상 */
+}
+
+/* Menu 텍스트 */
+.menu-item .menu-text {
+  font-size: 1.2rem; /* 텍스트 크기 */
+  color: #333; /* 텍스트 색상 */
+}
+
+/* Footer 스타일 */
+.footer {
+  background-color: lightgray; /* Footer 배경색 */
+  color: black; /* 텍스트 색상 */
+  padding: 10px; /* 내부 여백 */
+  width: 100%; /* 화면 전체 너비 */
+  text-align: center; /* 텍스트 가운데 정렬 */
+  position: fixed; /* 화면 고정 */
+  bottom: 0; /* 화면 아래쪽에 고정 */
+  right: 0; /* 오른쪽 끝으로 확장 */
+}
+
+.profile {
+  display: flex; /* Flexbox로 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  padding: 10px 10px;
+  cursor: pointer; /* 커서 포인터로 변경 */
+  transition: background-color 0.3s ease; /* Hover 효과 추가 */
+
+}
+
+.cr-container {
+  text-align: center; /* 텍스트를 중앙 정렬 */
+  background-color: #add8e6; /* 하늘색 배경 */
+  border-radius: 15px; /* 모서리를 둥글게 */
+  padding: 15px; /* 내부 여백 */
+  margin: 20px auto; /* 상하 여백 및 중앙 정렬 */
+  width: fit-content; /* 내용 크기에 맞게 너비 조정 */
+  border: 1px solid #ccc; /* 연한 회색 테두리 */
+}
+
+.cr {
+  font-family: Arial, sans-serif; /* 폰트 설정 */
+  font-size: 24px; /* 폰트 크기 */
+  margin: 0; /* 상하 좌우 여백 제거 */
+}
+
+.dots-spinner {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.dots-spinner span {
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: dots-bounce 1.4s infinite ease-in-out both;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.dots-spinner span:nth-child(1) {
+  animation-delay: -0.32s;
+}
+.dots-spinner span:nth-child(2) {
+  animation-delay: -0.16s;
+}
+.dots-spinner span:nth-child(3) {
+  animation-delay: 0s;
+}
+
+@keyframes dots-bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
   }
-  to {
-    transform: rotate(360deg);
+  40% {
+    transform: scale(1);
   }
 }
+
+
+
